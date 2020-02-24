@@ -8,8 +8,8 @@ and a filter to start streaming tweets.
 The credentials are passed to the server via the rpc clients.
 The rpc client.cc can either intiate a streaming tweets or
 stream tweets plus publish the tweets to a MQTT broker.
-The mqtt-sub-client.c can subscribe to the broker to receive 
-the tweets.
+The mqtt-sub-client.c can subscribe to the broker to receive
+the tweets. the rpc client.go will just receive streaming tweets not publishing them to the broker.
 
 Grpc server is: twitter-streamer.go
 Grpc clients are: client.go and client.cc
@@ -32,3 +32,16 @@ to build the mqtt-sub-client.c
    -  gcc -o mqtt-sub-client    mqtt-sub-client.c -lpaho-mqtt3a -lpaho-mqtt3c
    
 Then first run the twitter-streamer.go then the client programs
+
+Note:
+   in the programs client.go client.cc one needs to their own
+   consumerkey, consumerSecret, accessToken, and accessSecret from their Twitter account.
+   
+        consumerKey       = ""
+        consumerSecret    = ""
+        accessToken       = ""
+        accessSecret      = ""
+
+In addition I am using the Mosqitto pub/sub broker.
+   
+   
