@@ -18,12 +18,10 @@ import (
 const (port = ":50053")
 
 const  (	
-	consumerKey     = "OvGDjC6Lehj8uRpvZogDtEbpb"
-        consumerSecret = "r3A70e6ni5L1m1WVZtyjAQ6FzUwHgvczPjlJ2hWjw3Kiu1NaJs"
-        accessToken       = "256493456-tQuKAhfSVE16FIv6tEKm2W8zFVR6KCBlwozi1u5I"
-        accessSecret      = "KdQ4Ant0MML9UKxJRLHsANAgqwqWiliDQAsSeAVluDspH"
-//	filter                   = "washingtonpost"
-)
+	consumerKey     = "YOUR consumerkey"
+        consumerSecret = "YOUR consumersecret"
+        accessToken       = "YOUR accesstoken"
+        accessSecret      = "YOUR accesssecret"
 
 func main() {
 	
