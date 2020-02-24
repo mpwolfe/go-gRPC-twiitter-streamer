@@ -27,11 +27,11 @@ using Twitter::TwitterReply;
 
 using namespace std;
 
-#define ADDRESS "tcp://99.32.248.90:1883"    // address of broker
-#define GrpcAddress "127.0.0.1:50053"           // Grpc service address
-#define CLIENTID "twitter-id"                             // mqtt"
-#define QOS 1                                                   // mqtt
-#define TIMEOUT 10000L                                  // mqtt
+#define ADDRESS "tcp://127.0.0.1:1883"    // address of broker
+#define GrpcAddress "127.0.0.1:50053"     // Grpc service address
+#define CLIENTID "twitter-id"             // mqtt
+#define QOS 1                             // mqtt
+#define TIMEOUT 10000L                    // mqtt
 
 
 // *****************************************************************
@@ -199,10 +199,10 @@ int main(int argc, char* argv[]) {
   }
 
   // tiwtter credentials
-  string consumerKey("OvGDjC6Lehj8uRpvZogDtEbpb");
-  string consumerSecret("r3A70e6ni5L1m1WVZtyjAQ6FzUwHgvczPjlJ2hWjw3Kiu1NaJs");
-  string accessToken("256493456-tQuKAhfSVE16FIv6tEKm2W8zFVR6KCBlwozi1u5I");
-  string accessSecret("KdQ4Ant0MML9UKxJRLHsANAgqwqWiliDQAsSeAVluDspH");
+  string consumerKey("YOUR consumerkey");
+  string consumerSecret("YOUR consumersecret");
+  string accessToken("YOUR accesstoken");
+  string accessSecret("YOUR accesssecret");
 
   // connect to Grpc server
   TwitterClient client(grpc::CreateChannel(GrpcAddress,grpc::InsecureChannelCredentials()));
