@@ -1,0 +1,32 @@
+//  protoc -I. --go_out=plugins=grpc:.  twitter/twitter.proto
+
+syntax = "proto3";
+
+// option java_multiple_files = true;
+// option java_package = "io.grpc.examples.twitter";
+// option java_outer_classname = "TwitterProto";
+//option objc_class_prefix = "RTG";
+
+//package  proto;
+package  Twitter;
+
+//  services 
+service TweetService {
+	rpc GetTweet (TwitterRequest) returns (stream TwitterReply) {}
+}
+	
+// End Services
+
+message TwitterRequest {
+	string consumerKey = 1;
+	string consumerSecret = 2;
+	string accessToken = 3;
+	string accessSecret = 4;
+	string filter = 5;
+}
+
+message TwitterReply {
+  // string tweet = 1;
+  bytes  tweet = 1;
+}
+	       
