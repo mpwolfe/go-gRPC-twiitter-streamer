@@ -42,6 +42,6 @@ Note:
         accessToken       = ""
         accessSecret      = ""
 
-In addition I am using the Mosqitto pub/sub broker.
+In addition I am using the Mosqitto pub/sub broker, go grpc, c++ grpc, and protoc compiler
    
    
